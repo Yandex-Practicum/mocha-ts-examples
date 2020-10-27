@@ -1,0 +1,33 @@
+{
+  "name": "mocha-ts-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "types": "",
+  "scripts": {
+    "check-types": "tsc",
+    "compile": "babel src -d lib --extensions '.ts,.tsx'",
+    "prepublish": "npm run check-types && npm run compile",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "directories": {
+    "src": "./src",
+    "test": "./test"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "latest",
+    "typescript": "^3.9.7"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "license": "ISC"
+}
